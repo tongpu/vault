@@ -2561,3 +2561,9 @@ func (c *Core) RateLimitAuditLoggingEnabled() bool {
 
 	return false
 }
+
+// GetclusterPeerClusterAddrsCache returns a map with the contents of the PeerCluster cache
+func (c *Core) GetclusterPeerClusterAddrsCache() map[string]cache.Item {
+
+	return c.clusterPeerClusterAddrsCache.Items()
+}
